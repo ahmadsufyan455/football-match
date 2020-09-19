@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Football Match Schedule</string>
+    <string name="choose_a_league">Choose A League</string>
+    <string name="epl">English Premiere League</string>
+    <string name="web_url">www.premierleague.com</string>
+    <string name="facebook_url">facebook.com/premierleague</string>
+    <string-array name="idLeague">
+        <item>4328</item>
+        <item>4335</item>
+        <item>4332</item>
+        <item>4331</item>
+        <item>4334</item>
+        <item>4337</item>
+    </string-array>
+    <string-array name="logo">
+        <item>@drawable/epl</item>
+        <item>@drawable/laliga</item>
+        <item>@drawable/seriea</item>
+        <item>@drawable/bundesliga</item>
+        <item>@drawable/ligue1</item>
+        <item>@drawable/eradivise</item>
+    </string-array>
+    <string-array name="league_name">
+        <item>English Premier League</item>
+        <item>Spanish La Liga</item>
+        <item>Italian Serie A</item>
+        <item>German Bundesliga</item>
+        <item>French Ligue 1</item>
+        <item>Dutch Eredivisie</item>
+    </string-array>
+    <string-array name="league_web">
+        <item>www.premierleague.com</item>
+        <item>www.lfp.es</item>
+        <item>www.legaseriea.it/it</item>
+        <item>www.bundesliga.com/en</item>
+        <item>www.ligue1.com</item>
+        <item>www.eredivisie.nl</item>
+    </string-array>
+    <string-array name="league_facebook">
+        <item>facebook.com/premierleague</item>
+        <item>facebook.com/LaLiga</item>
+        <item>facebook.com/SerieA</item>
+        <item>facebook.com/BundesligaOfficial</item>
+        <item>acebook.com/Ligue1UberEats</item>
+        <item>facebook.com/eredivisie</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="barcelona">Barcelona</string>
+    <string name="real_madrid">Real Madrid</string>
+    <string name="date">17, Aug 2020</string>
+    <string name="vs">vs</string>
+    <string name="_1">1</string>
+    <string name="_3">3</string>
+    <string name="camp_nou">Camp Nou</string>
+    <string name="time">18:00</string>
+</resources>
