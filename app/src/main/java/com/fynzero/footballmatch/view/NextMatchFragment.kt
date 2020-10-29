@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fynzero.footballmatch.R
@@ -56,7 +55,7 @@ class NextMatchFragment : Fragment() {
         nextMatchViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())
             .get(NextMatchViewModel::class.java)
         nextMatchViewModel.setMatch(leagueId)
-        nextMatchViewModel.getMatch().observe(requireActivity(), Observer { matches ->
+        nextMatchViewModel.getMatch().observe(requireActivity(), { matches ->
             if (matches != null) {
                 nextMatchAdapter.setData(matches)
                 progressBar.visibility = View.GONE
