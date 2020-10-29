@@ -13,6 +13,12 @@ import java.util.*
 class LastMatchAdapter(private val matchList: ArrayList<LastMatch>) :
     RecyclerView.Adapter<LastMatchAdapter.ViewHolder>() {
 
+    private lateinit var onItemCLickCallback: OnItemCLickCallback
+
+    fun setOnItemClickCallback(onItemCLickCallback: OnItemCLickCallback) {
+        this.onItemCLickCallback = onItemCLickCallback
+    }
+
     fun setData(list: ArrayList<LastMatch>) {
         matchList.clear()
         matchList.addAll(list)
@@ -29,6 +35,9 @@ class LastMatchAdapter(private val matchList: ArrayList<LastMatch>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(matchList[position])
+        holder.itemView.setOnClickListener {
+            onItemCLickCallback.onItemClicked(matchList[holder.adapterPosition])
+        }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -50,5 +59,9 @@ class LastMatchAdapter(private val matchList: ArrayList<LastMatch>) :
                 txt_stadium.text = lastMatch.strVenue
             }
         }
+    }
+
+    interface OnItemCLickCallback {
+        fun onItemClicked(lastMatch: LastMatch)
     }
 }

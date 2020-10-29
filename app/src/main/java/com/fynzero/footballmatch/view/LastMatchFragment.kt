@@ -1,11 +1,11 @@
 package com.fynzero.footballmatch.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fynzero.footballmatch.R
@@ -56,10 +56,18 @@ class LastMatchFragment : Fragment() {
             ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())
                 .get(LastMatchViewModel::class.java)
         lastMatchViewModel.setMatch(leagueId)
-        lastMatchViewModel.getMatch().observe(requireActivity(), Observer { listMatch ->
+        lastMatchViewModel.getMatch().observe(requireActivity(), { listMatch ->
             if (listMatch != null) {
                 lastMatchAdapter.setData(listMatch)
                 progressBar.visibility = View.GONE
+            }
+        })
+
+        lastMatchAdapter.setOnItemClickCallback(object : LastMatchAdapter.OnItemCLickCallback {
+            override fun onItemClicked(lastMatch: LastMatch) {
+                val intent = Intent(context, DetailMatchActivity::class.java)
+                intent.putExtra(DetailMatchActivity.EXTRA_DETAIL, lastMatch)
+                startActivity(intent)
             }
         })
     }
