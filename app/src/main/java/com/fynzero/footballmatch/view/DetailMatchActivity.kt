@@ -62,6 +62,7 @@ class DetailMatchActivity : AppCompatActivity() {
                 txt_league_name.text = detailMatch[0].strLeague
                 txt_score_home.text = detailMatch[0].intHomeScore
                 txt_score_away.text = detailMatch[0].intAwayScore
+                txt_stadium.text = detailMatch[0].strVenue
             }
         })
     }

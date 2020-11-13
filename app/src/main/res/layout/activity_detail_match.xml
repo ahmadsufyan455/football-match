@@ -11,7 +11,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="210dp">
+        android:layout_height="220dp">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -135,6 +135,18 @@
                     app:layout_constraintStart_toEndOf="@+id/textView2"
                     app:layout_constraintTop_toTopOf="@+id/img_logo_away"
                     tools:text="@string/_3" />
+
+                <TextView
+                    android:id="@+id/txt_stadium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/o_regular"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_logo_home"
+                    tools:text="@string/camp_nou" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
