@@ -7,5 +7,7 @@ data class DetailMatch(
     val intAwayScore: String,
     val strLeague: String,
     val dateEventLocal: String,
-    val strVenue: String
+    val strVenue: String,
+    val strHomeGoalDetails: String,
+    val strAwayGoalDetails: String
 )

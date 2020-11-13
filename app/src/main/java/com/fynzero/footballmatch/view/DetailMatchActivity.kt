@@ -63,7 +63,11 @@ class DetailMatchActivity : AppCompatActivity() {
                 txt_score_home.text = detailMatch[0].intHomeScore
                 txt_score_away.text = detailMatch[0].intAwayScore
                 txt_stadium.text = detailMatch[0].strVenue
+                txt_home_goals.text = detailMatch[0].strHomeGoalDetails
+                txt_away_goals.text = detailMatch[0].strAwayGoalDetails
             }
         })
+
+        ic_back.setOnClickListener { finish() }
     }
 }
